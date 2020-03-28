@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/student/Desktop/cid/simulation/modelsim
+vand2_gate
+Z1 !s110 1582907271
+!i10b 1
+!s100 D2]S0bQS51Yfo>f547URl0
+I;_c6B5dSnEP1eDPSZFOk31
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1582906537
+8/home/student/Desktop/cid/and2_gate.v
+F/home/student/Desktop/cid/and2_gate.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1582907271.000000
+!s107 /home/student/Desktop/cid/and2_gate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/student/Desktop/cid|/home/student/Desktop/cid/and2_gate.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+/home/student/Desktop/cid
+Z7 tCvgOpt 0
+vand4_gate
+R1
+!i10b 1
+!s100 b2b@[2;?TPDAehM=M9ef10
+Ii5k]HB6SMH2R;i1El_amS0
+R2
+R0
+Z8 w1582907091
+8/home/student/Desktop/cid/and4_gate.v
+F/home/student/Desktop/cid/and4_gate.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/student/Desktop/cid/and4_gate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/student/Desktop/cid|/home/student/Desktop/cid/and4_gate.v|
+!i113 1
+R5
+R6
+R7
+vnot_gate
+R1
+!i10b 1
+!s100 DTm0mLl5e<@MzK@Xg4iIf3
+I7=^ib4PZbdFBY73ioMPHo0
+R2
+R0
+w1582906539
+8/home/student/Desktop/cid/not_gate.v
+F/home/student/Desktop/cid/not_gate.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/student/Desktop/cid/not_gate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/student/Desktop/cid|/home/student/Desktop/cid/not_gate.v|
+!i113 1
+R5
+R6
+R7
+vtop
+R1
+!i10b 1
+!s100 ZGaEf6T@A^T<gl;D31D6l0
+I4zS^<Tnm8GP5EQD82OTBN2
+R2
+R0
+R8
+8/home/student/Desktop/cid/top.v
+F/home/student/Desktop/cid/top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/student/Desktop/cid/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/student/Desktop/cid|/home/student/Desktop/cid/top.v|
+!i113 1
+R5
+R6
+R7
