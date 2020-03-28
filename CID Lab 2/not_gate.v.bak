@@ -1,0 +1,4 @@
+module not_gate();
+
+
+endmodule //not_gate
