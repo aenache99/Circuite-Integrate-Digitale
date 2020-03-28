@@ -1,0 +1,39 @@
+|top
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+x << not_gate:final.out0
+
+
+|top|and4_gate:caracatita
+in0 => in0.IN1
+in1 => in1.IN1
+in2 => in2.IN1
+in3 => in3.IN1
+out0 <= and2_gate:al_treilea.out0
+
+
+|top|and4_gate:caracatita|and2_gate:primul
+in0 => out0.IN0
+in1 => out0.IN1
+out0 <= out0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|and4_gate:caracatita|and2_gate:al_doilea
+in0 => out0.IN0
+in1 => out0.IN1
+out0 <= out0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|and4_gate:caracatita|and2_gate:al_treilea
+in0 => out0.IN0
+in1 => out0.IN1
+out0 <= out0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|not_gate:final
+in0 => out0.DATAIN
+out0 <= in0.DB_MAX_OUTPUT_PORT_TYPE
+
+
