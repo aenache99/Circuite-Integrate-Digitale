@@ -1,0 +1,6 @@
+|top
+in0 => out0.IN0
+in1 => out0.IN1
+out0 << out0.DB_MAX_OUTPUT_PORT_TYPE
+
+
