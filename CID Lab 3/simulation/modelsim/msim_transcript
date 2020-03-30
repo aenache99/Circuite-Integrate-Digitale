@@ -1,0 +1,86 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab3\ -\ Multplexor {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:13:16 on Mar 09,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v1.v 
+# -- Compiling module mux_v1
+# 
+# Top level modules:
+# 	mux_v1
+# End time: 11:13:16 on Mar 09,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab3\ -\ Multplexor {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:13:16 on Mar 09,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/top.v 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 11:13:16 on Mar 09,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab3\ -\ Multplexor {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:13:16 on Mar 09,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v3.v 
+# -- Compiling module mux_v3
+# 
+# Top level modules:
+# 	mux_v3
+# End time: 11:13:16 on Mar 09,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab3\ -\ Multplexor {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:13:16 on Mar 09,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v2.v 
+# -- Compiling module mux_v2
+# 
+# Top level modules:
+# 	mux_v2
+# End time: 11:13:16 on Mar 09,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab3\ -\ Multplexor {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:13:16 on Mar 09,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v4.v 
+# -- Compiling module mux_v4
+# 
+# Top level modules:
+# 	mux_v4
+# End time: 11:13:16 on Mar 09,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab3\ -\ Multplexor {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v5.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:13:16 on Mar 09,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/mux_v5.v 
+# -- Compiling module mux_v5
+# 
+# Top level modules:
+# 	mux_v5
+# End time: 11:13:16 on Mar 09,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab3\ -\ Multplexor {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:13:16 on Mar 09,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/tb.v 
+# -- Compiling module tb
+# ** Error: (vlog-13069) C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab3 - Multplexor/tb.v(13): near ")": syntax error, unexpected ')', expecting .* or '.'.
+# End time: 11:13:16 on Mar 09,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./top_run_msim_rtl_verilog.do line 15
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab3\ -\ Multplexor {C:/Users/thema/Documents/..."
