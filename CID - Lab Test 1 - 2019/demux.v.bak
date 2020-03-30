@@ -1,0 +1,33 @@
+module demux(input wire [2:0] sel,
+				input wire in,
+				output reg [4:0] out
+				);
+always @(*)
+begin
+if(sel==1)
+begin out[1]=in;
+		out[0]=0;
+		out[2]=0;
+		out[3]=0;
+		out[4]=0;
+end
+else if(sel==0)
+begin
+		out[0]=in;
+		out[1]=0;
+		out[2]=0;
+		out[3]=0;
+		out[4]=0;
+		out[5]=0;
+end
+else
+begin
+		out[0]=0;
+		out[1]=0;
+		out[2]=in;
+		out[3]=0;
+		out[4]=0;
+end
+
+endmodule
+

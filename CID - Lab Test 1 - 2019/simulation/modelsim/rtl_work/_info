@@ -1,0 +1,165 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/simulation/modelsim
+vdemux
+Z1 !s110 1584654022
+!i10b 1
+!s100 3LGiFRSJ`c0DGhU_AI<jL1
+IjNjYa4SV;Sz5oCO<0YdU20
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1584351677
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/demux.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/demux.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1584654022.000000
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/demux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/demux.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid}
+Z7 tCvgOpt 0
+vmux2
+R1
+!i10b 1
+!s100 m85FZ<@9;;[WQO@hW^n?Q0
+Ij=hSRIGF^>@KW=zUXNVR71
+R2
+R0
+w1584297199
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux2.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux2.v|
+!i113 1
+R5
+R6
+R7
+vmux22bit
+R1
+!i10b 1
+!s100 cZZ=g7Po39c?N]MhV2;>h2
+IhW>i4H:k5kZnc]5EHPT6l2
+R2
+R0
+w1584618923
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux22bit.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux22bit.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux22bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux22bit.v|
+!i113 1
+R5
+R6
+R7
+vmux4
+R1
+!i10b 1
+!s100 _6>ZY2TLo2O4Mb5eIX5hB0
+I?L^G<Zo=gK[FJo6_Y:P@D0
+R2
+R0
+w1584297225
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux4.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux4.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/mux4.v|
+!i113 1
+R5
+R6
+R7
+vParityChecker
+R1
+!i10b 1
+!s100 DM;07h8hSJ1ekNQ@lHHk83
+I]IlG8Pi_jazDnV04ndRVP0
+R2
+R0
+w1584617541
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/ParityChecker.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/ParityChecker.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/ParityChecker.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/ParityChecker.v|
+!i113 1
+R5
+R6
+R7
+n@parity@checker
+vtb
+R1
+!i10b 1
+!s100 ==e0XK=a_N[kBlzBB>nd42
+IBXJoKEC1]=`]mCBCeYJ:90
+R2
+R0
+w1584654006
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/tb.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/tb.v|
+!i113 1
+R5
+R6
+R7
+vtop
+R1
+!i10b 1
+!s100 jgNnO>?R=4b<WR3maGzaK3
+IL=2AXHTNgzQG4Y2dLD1cQ2
+R2
+R0
+w1584620740
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/top.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/testcid/top.v|
+!i113 1
+R5
+R6
+R7
