@@ -1,0 +1,6 @@
+module mux_v3(input wire in0,
+				  input wire in1,
+				  input wire sel,
+				  output reg out2);
+assign out2 = (sel == 0) ? in0 : in1;
+endmodule

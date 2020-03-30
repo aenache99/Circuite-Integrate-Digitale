@@ -1,0 +1,11 @@
+module mux_v3(input wire in0,
+				  input wire in1,
+				  input wire sel,
+				  output reg out4);
+always@( * )
+case(sel)
+0: out4=in1;
+1: out4=in2;
+default: out = 0;
+endcase
+endmodule // mux_v3

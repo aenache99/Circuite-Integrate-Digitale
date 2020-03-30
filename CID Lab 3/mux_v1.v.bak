@@ -1,0 +1,7 @@
+module mux_v1();
+input in0;
+input in1;
+input SEL;
+output out0;
+assign out0 = (in0 & !SEL) || (in1 & SEL);
+endmodule // muxv1

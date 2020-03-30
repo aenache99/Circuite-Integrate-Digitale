@@ -1,0 +1,6 @@
+module top (input wire in0,
+				input wire in1,
+				input wire SEL,
+				output wire out0);
+mux 
+endmodule // top 
