@@ -1,0 +1,43 @@
+|top
+data[0] => data[0].IN1
+data[1] => data[1].IN1
+data[2] => data[2].IN1
+data[3] => data[3].IN1
+load => load.IN1
+out[0] << latchmux:ltch1.out
+out[1] << latchmux:ltch1.out
+out[2] << latchmux:ltch1.out
+out[3] << latchmux:ltch1.out
+
+
+|top|latchmux:ltch1
+load => load.IN1
+data[0] => data[0].IN1
+data[1] => data[1].IN1
+data[2] => data[2].IN1
+data[3] => data[3].IN1
+out[0] <= bucla[0].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= bucla[1].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= bucla[2].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= bucla[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|latchmux:ltch1|mux2:multiplex
+in0[0] => out.DATAA
+in0[1] => out.DATAA
+in0[2] => out.DATAA
+in0[3] => out.DATAA
+in1[0] => out.DATAB
+in1[1] => out.DATAB
+in1[2] => out.DATAB
+in1[3] => out.DATAB
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+sel => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
