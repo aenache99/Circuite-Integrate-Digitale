@@ -1,0 +1,8 @@
+module comparator_ae(input wire [32:0]in0,
+							input wire [32:0]in1,
+							output wire out);
+if (in0 >= in1)
+	assign out = 1;
+else 
+	assign out = 0;
+endmodule 
