@@ -1,0 +1,24 @@
+module tb();
+reg [9:0]memory_addr_tb;
+reg [7:0]memory_data_tb;
+reg [1:0]select_memory_tb;
+reg clk;
+wire [7:0]mem_0_out_tb;
+wire [7:0]mem_1_out_tb;
+wire [7:0]mem_2_out_tb;
+wire [7:0]mem_3_out_tb;
+top DUT(.memory_addr(memory_addr_tb),
+		  .memory_data(memory_data_tb),
+		  .select_memory(select_memory_tb),
+			.clk
+			.mem_0_out(mem_0_out_tb),
+			.mem_1_out(mem_1_out_tb),
+			.mem_2_out(mem_2_out_tb),
+			.mem_3_out(mem_3_out_tb)
+			);
+initial
+begin
+        clk = 0;
+        forever
+		  #5 clk = !clk;
+end

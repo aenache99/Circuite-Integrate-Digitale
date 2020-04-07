@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/simulation/modelsim
+vdecodor
+Z1 !s110 1585823099
+!i10b 1
+!s100 SfI]Om08L7M^;EGQ6W_UL3
+IROf>5EL@7z^H>N3k195_P2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1585817894
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/decodor.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/decodor.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1585823099.000000
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/decodor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/decodor.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5}
+Z7 tCvgOpt 0
+vmemory
+R1
+!i10b 1
+!s100 ^Wc`LG[NHf^a0gCEeKl@l0
+I^NnCzjoz5nk^XhiVkz@Mc0
+R2
+R0
+w1585821498
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/rom.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/rom.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/rom.v|
+!i113 1
+R5
+R6
+R7
+vtb
+Z8 !s110 1585823100
+!i10b 1
+!s100 GJ8=3_gXXmUdcgX>S7zd81
+I6GY0PPOof?1MWEPeeWz;>3
+R2
+R0
+w1585823014
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/tb.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1585823100.000000
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/tb.v|
+!i113 1
+R5
+R6
+R7
+vtop
+R8
+!i10b 1
+!s100 hd4GMRJ>EFFzROS]RMd>:2
+INoX@FD`ZRQ_an9zdOi:Aj1
+R2
+R0
+w1585821493
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/top.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 5/top.v|
+!i113 1
+R5
+R6
+R7

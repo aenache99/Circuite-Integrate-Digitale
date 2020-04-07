@@ -1,0 +1,16 @@
+module top(input wire [9:0]memory_addr,
+				input wire [7:0]memory_data,
+				input wire [1:0]select_memory,
+				output reg [7:0]mem_0_out,
+				output reg [7:0]mem_1_out,
+				output reg [7:0]mem_2_out,
+				output reg [7:0]mem_3_out);
+wire w_en;
+decodor decod(.in(select_memory),
+					.out(w_en));
+
+rom rom0();
+rom rom1();
+rom rom2();
+rom rom3();
+endmodule 
