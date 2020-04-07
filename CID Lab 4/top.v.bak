@@ -1,0 +1,19 @@
+module top (input [3:0]data,
+				input clk,
+				output [3:0]out
+					);
+
+wire [3:0]outerTop;
+
+					
+latchmux ltch1(.load(clk),
+				  .data(data),
+				  .out(outerTop)
+				  );
+				  
+latchmux ltch2(.load(~clk),
+				  .data(outerTop),
+				  .out(out)
+				  );
+					
+endmodule 
