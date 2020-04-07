@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/simulation/modelsim
+vlatchmux
+Z1 !s110 1585218976
+!i10b 1
+!s100 hM34:^9f`_KQkM@U5197e1
+IU[4S92?MMQf6c=P`oZ33D3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1585216507
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/latchmux.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/latchmux.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1585218976.000000
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/latchmux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/latchmux.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord}
+Z7 tCvgOpt 0
+vmux2
+R1
+!i10b 1
+!s100 n^6nS2;O3[7_dlk?=DYTS3
+IQg7[OWmIZ77lSJzEf3^VE0
+R2
+R0
+w1585216509
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/mux2.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/mux2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/mux2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/mux2.v|
+!i113 1
+R5
+R6
+R7
+vtb
+R1
+!i10b 1
+!s100 a_9eiPM;@iecG]G5zbN5P2
+IHz[>^jmJ8X2i8z7DCnT5V2
+R2
+R0
+w1585218913
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/tb.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/tb.v|
+!i113 1
+R5
+R6
+R7
+vtop
+R1
+!i10b 1
+!s100 M?<P?cjVdOiDX?lb^IOdb0
+IP`8X]WFD8eHhF2Tb8UQ0C1
+R2
+R0
+w1585216647
+8C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/top.v
+FC:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord|C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab4 - Discord/top.v|
+!i113 1
+R5
+R6
+R7
