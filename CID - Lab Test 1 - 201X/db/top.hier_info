@@ -1,0 +1,150 @@
+|top
+in0[0] => in0[0].IN4
+in0[1] => in0[1].IN4
+in0[2] => in0[2].IN4
+in0[3] => in0[3].IN4
+in1[0] => in1[0].IN4
+in1[1] => in1[1].IN4
+in1[2] => in1[2].IN4
+in1[3] => in1[3].IN4
+sel[0] => sel[0].IN1
+sel[1] => sel[1].IN1
+oe => oe.IN1
+out[0] <= transcodor:trans.out
+out[1] <= transcodor:trans.out
+out[2] <= transcodor:trans.out
+out[3] <= transcodor:trans.out
+out[4] <= transcodor:trans.out
+out[5] <= transcodor:trans.out
+out[6] <= transcodor:trans.out
+
+
+|top|bitwise_and:si
+in0[0] => out.IN0
+in0[1] => out.IN0
+in0[2] => out.IN0
+in0[3] => out.IN0
+in1[0] => out.IN1
+in1[1] => out.IN1
+in1[2] => out.IN1
+in1[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bitwise_sum:suma
+in0[0] => out.IN0
+in0[1] => out.IN0
+in0[2] => out.IN0
+in0[3] => out.IN0
+in1[0] => out.IN1
+in1[1] => out.IN1
+in1[2] => out.IN1
+in1[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bitwise_xor:sauexcl
+in0[0] => out.IN0
+in0[1] => out.IN0
+in0[2] => out.IN0
+in0[3] => out.IN0
+in1[0] => out.IN1
+in1[1] => out.IN1
+in1[2] => out.IN1
+in1[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|bitwise_and:andbit
+in0[0] => out.IN0
+in0[1] => out.IN0
+in0[2] => out.IN0
+in0[3] => out.IN0
+in1[0] => out.IN1
+in1[1] => out.IN1
+in1[2] => out.IN1
+in1[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|mux44bit:mux4in1
+in0[0] => out.DATAA
+in0[1] => out.DATAA
+in0[2] => out.DATAA
+in0[3] => out.DATAA
+in1[0] => out.DATAB
+in1[1] => out.DATAB
+in1[2] => out.DATAB
+in1[3] => out.DATAB
+in2[0] => out.DATAA
+in2[1] => out.DATAA
+in2[2] => out.DATAA
+in2[3] => out.DATAA
+in3[0] => out.DATAB
+in3[1] => out.DATAB
+in3[2] => out.DATAB
+in3[3] => out.DATAB
+sel[0] => out.OUTPUTSELECT
+sel[0] => out.OUTPUTSELECT
+sel[0] => out.OUTPUTSELECT
+sel[0] => out.OUTPUTSELECT
+sel[0] => out.OUTPUTSELECT
+sel[0] => out.OUTPUTSELECT
+sel[0] => out.OUTPUTSELECT
+sel[0] => out.OUTPUTSELECT
+sel[1] => out.OUTPUTSELECT
+sel[1] => out.OUTPUTSELECT
+sel[1] => out.OUTPUTSELECT
+sel[1] => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|mux24bit:mux2in1
+in0[0] => out.DATAA
+in0[1] => out.DATAA
+in0[2] => out.DATAA
+in0[3] => out.DATAA
+in1[0] => out.DATAB
+in1[1] => out.DATAB
+in1[2] => out.DATAB
+in1[3] => out.DATAB
+oe => out.OUTPUTSELECT
+oe => out.OUTPUTSELECT
+oe => out.OUTPUTSELECT
+oe => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|transcodor:trans
+in[0] => Decoder0.IN4
+in[1] => Decoder0.IN3
+in[2] => Decoder0.IN2
+in[3] => Decoder0.IN1
+in[4] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
