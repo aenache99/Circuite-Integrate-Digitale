@@ -2,9 +2,9 @@ module top(input wire clk,
 				input wire rst,
 				input wire load,
 				input wire up_not_down,
-				output wire [32:0]freq_div_out,
+				output wire [31:0]freq_div_out,
 				output wire counter_1s);
-wire counter_comp;
+wire [31:0]counter_comp;
 wire comp_ff;
 counter unit1(.clk(clk),
 					.rst(rst || comp_ff),

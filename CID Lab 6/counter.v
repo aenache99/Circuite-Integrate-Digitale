@@ -2,8 +2,8 @@ module counter(input wire clk,
 					input wire rst,
 					input wire load,
 					input wire up_not_down,
-					input wire [32:0]load_value,
-					output reg [32:0]out_value);
+					input wire [31:0]load_value,
+					output reg [31:0]out_value);
 always @(posedge clk)
 begin
 	if (rst == 1)

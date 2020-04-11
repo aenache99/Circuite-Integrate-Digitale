@@ -1,5 +1,5 @@
-module comparator_ae(input wire [32:0]in0,
-							input wire [32:0]in1,
+module comparator_ae(input wire [31:0]in0,
+							input wire [31:0]in1,
 							output reg out);
 					
 always@( * )		

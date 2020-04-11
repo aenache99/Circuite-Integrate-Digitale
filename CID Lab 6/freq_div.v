@@ -1,6 +1,6 @@
 module freq_div(input wire clk,
 					input wire rst,
-					output reg [32:0]value);
+					output reg [31:0]value);
 
 always @(posedge clk) 
 begin
