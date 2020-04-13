@@ -1,0 +1,15 @@
+module special(input wire [7:0]in0,
+					input wire [7:0]in1,
+					output reg sel);
+					
+always @(*)
+begin
+if (in0[7] == in0[0])
+	begin
+	if (in1[7] == in1[0])
+		sel = 1;
+	end
+else
+	sel = 0;
+end
+endmodule 
