@@ -1,0 +1,19 @@
+module counter_w_autoreset_mark1(input wire clk,
+											input wire rst,
+											input wire en,
+											input wire autoreset_limit,
+											output reg auto_reset;
+											output reg [7:0]value);
+always @(posedge clk)
+begin
+		if (rst == 1 || value == autoreset_limit)
+				begin
+				value <= 0;
+				if (value == autoreset_limit)
+					auto_reset = 1;
+				end
+		else if (en == 1)
+				value <= value + 1;
+end
+
+endmodule 

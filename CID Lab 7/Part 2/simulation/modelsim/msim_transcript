@@ -1,0 +1,111 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab\ 7/Part\ 2 {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:31 on Apr 14,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 14:32:32 on Apr 14,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab\ 7/Part\ 2 {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:32 on Apr 14,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark1.v 
+# -- Compiling module counter_w_autoreset_mark1
+# 
+# Top level modules:
+# 	counter_w_autoreset_mark1
+# End time: 14:32:32 on Apr 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab\ 7/Part\ 2 {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:32 on Apr 14,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark2.v 
+# -- Compiling module counter_w_autoreset_mark2
+# 
+# Top level modules:
+# 	counter_w_autoreset_mark2
+# End time: 14:32:32 on Apr 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab\ 7/Part\ 2 {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:32 on Apr 14,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark3.v 
+# -- Compiling module counter_w_autoreset_mark3
+# 
+# Top level modules:
+# 	counter_w_autoreset_mark3
+# End time: 14:32:32 on Apr 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab\ 7/Part\ 2 {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/comp_ae.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:32 on Apr 14,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/comp_ae.v 
+# -- Compiling module comp_ae
+# 
+# Top level modules:
+# 	comp_ae
+# End time: 14:32:32 on Apr 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/thema/Documents/Laborator\ CID\ -\ Mihai\ Antonescu/CID\ Lab\ 7/Part\ 2 {C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:32:32 on Apr 14,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2" C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 14:32:33 on Apr 14,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
+# Start time: 14:32:33 on Apr 14,2020
+# Loading work.tb
+# Loading work.top
+# Loading work.counter_w_autoreset_mark1
+# Loading work.counter_w_autoreset_mark2
+# Loading work.counter_w_autoreset_mark3
+# Loading work.comp_ae
+# ** Warning: (vsim-3015) C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v(7): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark1.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/numarator1 File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark1.v
+# ** Warning: (vsim-3015) C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v(7): [PCDPC] - Port size (1) does not match connection size (32) for port 'autoreset_limit'. The port definition is at: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark1.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/numarator1 File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark1.v
+# ** Warning: (vsim-3015) C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v(7): [PCDPC] - Port size (8) does not match connection size (1) for port 'value'. The port definition is at: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark1.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/numarator1 File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark1.v
+# ** Warning: (vsim-3015) C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v(13): [PCDPC] - Port size (1) does not match connection size (32) for port 'autoreset_limit'. The port definition is at: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark2.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/numarator2 File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark2.v
+# ** Warning: (vsim-3015) C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'autoreset_limit'. The port definition is at: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark3.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/numarator3 File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark3.v
+# ** Warning: (vsim-3015) C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v(18): [PCDPC] - Port size (8) does not match connection size (1) for port 'value'. The port definition is at: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark3.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/numarator3 File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/counter_w_autoreset_mark3.v
+# ** Warning: (vsim-3015) C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v(23): [PCDPC] - Port size (8) does not match connection size (1) for port 'in0'. The port definition is at: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/comp_ae.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/comparator File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/comp_ae.v
+# ** Warning: (vsim-3015) C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/top.v(23): [PCDPC] - Port size (8) does not match connection size (1) for port 'in1'. The port definition is at: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/comp_ae.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/comparator File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/comp_ae.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/tb.v(35)
+#    Time: 1195 ps  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/Part 2/tb.v line 35
+# End time: 14:32:55 on Apr 14,2020, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 8
