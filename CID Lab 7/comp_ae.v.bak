@@ -1,0 +1,12 @@
+module comp_ae(input wire in0,
+					input wire in1,
+					output reg out);
+					
+always@( * )		
+begin	
+if (in0 >= in1)
+	out = 1;
+else 
+	out = 0;
+end
+endmodule 

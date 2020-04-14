@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at counter_w_autoreset.v(7): always construct contains both blocking and non-blocking assignments File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID Lab 7/counter_w_autoreset.v Line: 7

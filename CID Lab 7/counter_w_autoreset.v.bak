@@ -1,0 +1,20 @@
+module counter_w_autoreset(input wire clk,
+									input wire rst,
+									input wire en,
+									input wire autoreset_limit,
+									output reg autoreset,
+									output reg value);
+always @(posedge clk)
+begin
+	while (autoreset <= autoreset_limit)
+		begin
+			if (rst == 0)
+				value <= 0;
+			else if (en == 1)
+				value <= value + 1;
+			else 
+				//pauza
+		autoreset = autoreset + 1;
+		end
+end
+endmodule 

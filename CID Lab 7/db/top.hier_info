@@ -1,0 +1,70 @@
+|top
+clk => clk.IN1
+rst => rst.IN1
+en => en.IN1
+pwm_out << comp_ae:comparator.out
+
+
+|top|counter_W_autoreset:numarator
+clk => value[0]~reg0.CLK
+clk => value[1]~reg0.CLK
+clk => value[2]~reg0.CLK
+clk => value[3]~reg0.CLK
+clk => value[4]~reg0.CLK
+clk => value[5]~reg0.CLK
+clk => value[6]~reg0.CLK
+clk => value[7]~reg0.CLK
+rst => value.OUTPUTSELECT
+rst => value.OUTPUTSELECT
+rst => value.OUTPUTSELECT
+rst => value.OUTPUTSELECT
+rst => value.OUTPUTSELECT
+rst => value.OUTPUTSELECT
+rst => value.OUTPUTSELECT
+rst => value.OUTPUTSELECT
+en => value.OUTPUTSELECT
+en => value.OUTPUTSELECT
+en => value.OUTPUTSELECT
+en => value.OUTPUTSELECT
+en => value.OUTPUTSELECT
+en => value.OUTPUTSELECT
+en => value.OUTPUTSELECT
+en => value.OUTPUTSELECT
+autoreset_limit[0] => LessThan0.IN8
+autoreset_limit[1] => LessThan0.IN7
+autoreset_limit[2] => LessThan0.IN6
+autoreset_limit[3] => LessThan0.IN5
+autoreset_limit[4] => LessThan0.IN4
+autoreset_limit[5] => LessThan0.IN3
+autoreset_limit[6] => LessThan0.IN2
+autoreset_limit[7] => LessThan0.IN1
+value[0] <= value[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= value[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= value[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= value[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[4] <= value[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[5] <= value[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[6] <= value[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[7] <= value[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|comp_ae:comparator
+in0[0] => LessThan0.IN8
+in0[1] => LessThan0.IN7
+in0[2] => LessThan0.IN6
+in0[3] => LessThan0.IN5
+in0[4] => LessThan0.IN4
+in0[5] => LessThan0.IN3
+in0[6] => LessThan0.IN2
+in0[7] => LessThan0.IN1
+in1[0] => LessThan0.IN16
+in1[1] => LessThan0.IN15
+in1[2] => LessThan0.IN14
+in1[3] => LessThan0.IN13
+in1[4] => LessThan0.IN12
+in1[5] => LessThan0.IN11
+in1[6] => LessThan0.IN10
+in1[7] => LessThan0.IN9
+out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
