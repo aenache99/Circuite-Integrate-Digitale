@@ -1,0 +1,7 @@
+|FSM
+clk => out_cioco~reg0.CLK
+load50bani => ~NO_FANOUT~
+load1leu => ~NO_FANOUT~
+out_cioco << out_cioco~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

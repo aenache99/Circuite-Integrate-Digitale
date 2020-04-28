@@ -1,0 +1,49 @@
+module tb();
+reg clk;
+reg load50bani_tb;
+reg load100bani_tb;
+wire out_cioco_tb;
+
+FSM DUT (
+	.clk(clk),
+	.load50bani(load50bani_tb),
+	.load100bani(load100bani_tb),
+	.out_cioco(out_cioco_tb)
+	);
+
+initial
+begin
+	clk = 0;
+	forever 
+		begin
+		#5 clk = ~clk;
+		end
+end
+
+initial
+begin
+load50bani_tb = 0;
+load100bani_tb = 0;
+
+#2
+load50bani_tb = 1;
+load100bani_tb = 0;
+
+#4
+load50bani_tb = 1;
+load100bani_tb = 0;
+
+#6
+load50bani_tb = 0;
+load100bani_tb = 1;
+
+#8
+load50bani_tb = 1;
+load100bani_tb = 0;
+
+#10
+$stop;
+
+end
+
+endmodule 

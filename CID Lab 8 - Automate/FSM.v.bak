@@ -1,0 +1,102 @@
+module FSM(
+    input wire clk,
+    input wire in,
+	 output reg out_cioco
+);
+// definim starile automatului de ciocolata
+localparam STATE_0bani = 0;
+localparam STATE_50bani = 1;
+localparam STATE_100bani = 2;
+localparam STATE_150bani = 3;
+localparam STATE_200bani = 4;
+localparam STATE_250bani = 5;
+localparam STATE_300bani = 6;
+
+reg state;
+
+always @(posedge clk)
+begin
+   case (state)
+            STATE_0bani: 
+				begin
+					if (in == 1)
+						begin
+						state <= STATE_50bani;
+						out_cioco <= 0;
+						end
+					else if (in == 2)
+						begin
+						state <= STATE_100bani;
+						out_cioco <= 0;
+						end
+					else
+						state <= STATE_0bani; // adica do nothing
+				end
+            STATE_50bani:
+				begin
+					if (in == 1)
+						begin
+						state <= STATE_100bani;
+						out_cioco <= 0;
+						end
+					else if (in == 2)
+						begin
+						state <= STATE_150bani;
+						out_cioco <= 0;
+						end
+					else
+						state <= STATE_50bani; // adica do nothing
+				end
+            STATE_100bani:
+				begin
+					if (in == 1)
+						begin
+						state <= STATE_150bani;
+						out_cioco <= 0;
+						end
+					else if (in == 2)
+						begin
+						state <= STATE_200bani;
+						out_cioco <= 0;
+						end
+					else
+						state <= STATE_100bani; // adica do nothing
+				end
+				STATE_150bani:
+				begin
+					if (in == 1)
+						begin
+						state <= STATE_200bani;
+						out_cioco <= 0;
+						end
+					else if (in == 2)
+						begin
+						state <= STATE_250bani;
+						out_cioco <= ;
+						end
+					else
+						state <= STATE_150bani; // adica do nothing
+				end
+            STATE_200bani:
+				begin
+					if (in == 1)
+						begin
+						state <= STATE_250bani;
+						out_cioco <= ;
+						end
+					else if (in == 2)
+						begin
+						state <= STATE_300bani;
+						out_cioco <= ;
+						end
+					else
+						state <= STATE_200bani; // adica do nothing
+				end
+            STATE_250bani:
+
+            STATE_300bani:	
+				
+            default: state <= STATE_0bani;
+        endcase
+end
+endmodule 
