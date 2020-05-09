@@ -1,0 +1,145 @@
+|top
+clk => clk.IN3
+rst_n => rst_n.IN3
+save_n => save_n.IN1
+sel => sel.IN2
+data[0] => data[0].IN1
+data[1] => data[1].IN1
+data[2] => data[2].IN1
+data[3] => data[3].IN1
+wr_addr[0] => wr_addr[0].IN1
+wr_addr[1] => wr_addr[1].IN1
+wr_addr[2] => wr_addr[2].IN1
+wr_addr[3] => wr_addr[3].IN1
+instructions[0] <= ram_instr:ram.rd_data
+instructions[1] <= ram_instr:ram.rd_data
+instructions[2] <= ram_instr:ram.rd_data
+instructions[3] <= ram_instr:ram.rd_data
+
+
+|top|demux1:dmx1
+in => out0.DATAA
+in => out1.DATAB
+sel => Decoder0.IN0
+out0 <= out0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|demux2:dmx2
+in[0] => out0.DATAA
+in[0] => out1.DATAB
+in[1] => out0.DATAA
+in[1] => out1.DATAB
+in[2] => out0.DATAA
+in[2] => out1.DATAB
+in[3] => out0.DATAA
+in[3] => out1.DATAB
+sel => Decoder0.IN0
+out0[0] <= out0.DB_MAX_OUTPUT_PORT_TYPE
+out0[1] <= out0.DB_MAX_OUTPUT_PORT_TYPE
+out0[2] <= out0.DB_MAX_OUTPUT_PORT_TYPE
+out0[3] <= out0.DB_MAX_OUTPUT_PORT_TYPE
+out1[0] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[1] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[2] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out1[3] <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|osscon:oss
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+rst_n => out.OUTPUTSELECT
+rst_n => out.OUTPUTSELECT
+data[0] => out.DATAB
+data[1] => out.DATAB
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+save => out.OUTPUTSELECT
+save => out.OUTPUTSELECT
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|decoder:dec
+sel[0] => ShiftLeft0.IN34
+sel[1] => ShiftLeft0.IN33
+out[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|freq_div:comb_3
+clk => out~reg0.CLK
+rst_n => out.OUTPUTSELECT
+en => Decoder0.IN0
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|mux:mux4
+in[0] => Mux0.IN3
+in[1] => Mux0.IN2
+in[2] => Mux0.IN1
+in[3] => Mux0.IN0
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|programcounter:pc
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+rst_n => out.OUTPUTSELECT
+rst_n => out.OUTPUTSELECT
+rst_n => out.OUTPUTSELECT
+rst_n => out.OUTPUTSELECT
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|ram_instr:ram
+clk => mem.we_a.CLK
+clk => mem.waddr_a[3].CLK
+clk => mem.waddr_a[2].CLK
+clk => mem.waddr_a[1].CLK
+clk => mem.waddr_a[0].CLK
+clk => mem.data_a[3].CLK
+clk => mem.data_a[2].CLK
+clk => mem.data_a[1].CLK
+clk => mem.data_a[0].CLK
+clk => rd_data[0]~reg0.CLK
+clk => rd_data[1]~reg0.CLK
+clk => rd_data[2]~reg0.CLK
+clk => rd_data[3]~reg0.CLK
+clk => mem.CLK0
+rd_addr[0] => mem.RADDR
+rd_addr[1] => mem.RADDR1
+rd_addr[2] => mem.RADDR2
+rd_addr[3] => mem.RADDR3
+wr_data[0] => mem.data_a[0].DATAIN
+wr_data[0] => mem.DATAIN
+wr_data[1] => mem.data_a[1].DATAIN
+wr_data[1] => mem.DATAIN1
+wr_data[2] => mem.data_a[2].DATAIN
+wr_data[2] => mem.DATAIN2
+wr_data[3] => mem.data_a[3].DATAIN
+wr_data[3] => mem.DATAIN3
+wr_addr[0] => mem.waddr_a[0].DATAIN
+wr_addr[0] => mem.WADDR
+wr_addr[1] => mem.waddr_a[1].DATAIN
+wr_addr[1] => mem.WADDR1
+wr_addr[2] => mem.waddr_a[2].DATAIN
+wr_addr[2] => mem.WADDR2
+wr_addr[3] => mem.waddr_a[3].DATAIN
+wr_addr[3] => mem.WADDR3
+save => mem.we_a.DATAIN
+save => mem.WE
+rd_data[0] <= rd_data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[1] <= rd_data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[2] <= rd_data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rd_data[3] <= rd_data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

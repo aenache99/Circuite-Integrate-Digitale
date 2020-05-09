@@ -1,0 +1,14 @@
+module mux(input wire [1:0] sel,
+				output wire out);
+
+always @(*)
+begin
+	case (sel)
+	0: out = 00;
+	1: out = 01;
+	2: out = 10;
+	3: out = 11;
+	default: out = 0;
+	endcase
+end
+endmodule 

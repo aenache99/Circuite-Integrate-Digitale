@@ -1,0 +1,5 @@
+module decoder(input wire [1:0]in,
+					output wire [2:0]out);
+
+assign out = 1 << in;
+endmodule 
