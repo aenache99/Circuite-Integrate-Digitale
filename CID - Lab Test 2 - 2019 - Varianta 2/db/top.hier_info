@@ -1,0 +1,346 @@
+|top
+start => toggle_toggle_ff.IN0
+start => comb.IN1
+clk => clk.IN4
+rst => rst.IN3
+data_in[0] => data_in[0].IN2
+data_in[1] => data_in[1].IN2
+data_in[2] => data_in[2].IN2
+data_in[3] => data_in[3].IN2
+data_in[4] => data_in[4].IN2
+data_in[5] => data_in[5].IN2
+data_in[6] => data_in[6].IN2
+data_in[7] => data_in[7].IN2
+out_tx <= out_tx.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|toggle_ff:uut1
+clk => out~reg0.CLK
+rst => out.OUTPUTSELECT
+toggle => out.OUTPUTSELECT
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|crc_calc:uut2
+in[0] => out.IN1
+in[1] => out.IN1
+in[2] => out.IN1
+in[3] => out.IN1
+in[4] => out.IN1
+in[5] => out.IN1
+in[6] => out.IN0
+in[7] => out.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|counter_bit_select:uut3
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+rst => out.OUTPUTSELECT
+rst => out.OUTPUTSELECT
+rst => out.OUTPUTSELECT
+rst => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|counter_baud_rate:uut4
+clk => out[0]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[3]~reg0.CLK
+clk => out[4]~reg0.CLK
+clk => out[5]~reg0.CLK
+clk => out[6]~reg0.CLK
+clk => out[7]~reg0.CLK
+clk => out[8]~reg0.CLK
+clk => out[9]~reg0.CLK
+clk => out[10]~reg0.CLK
+clk => out[11]~reg0.CLK
+clk => out[12]~reg0.CLK
+clk => out[13]~reg0.CLK
+clk => out[14]~reg0.CLK
+clk => out[15]~reg0.CLK
+clk => out[16]~reg0.CLK
+clk => out[17]~reg0.CLK
+clk => out[18]~reg0.CLK
+clk => out[19]~reg0.CLK
+rst_async => out[0]~reg0.ACLR
+rst_async => out[1]~reg0.ACLR
+rst_async => out[2]~reg0.ACLR
+rst_async => out[3]~reg0.ACLR
+rst_async => out[4]~reg0.ACLR
+rst_async => out[5]~reg0.ACLR
+rst_async => out[6]~reg0.ACLR
+rst_async => out[7]~reg0.ACLR
+rst_async => out[8]~reg0.ACLR
+rst_async => out[9]~reg0.ACLR
+rst_async => out[10]~reg0.ACLR
+rst_async => out[11]~reg0.ACLR
+rst_async => out[12]~reg0.ACLR
+rst_async => out[13]~reg0.ACLR
+rst_async => out[14]~reg0.ACLR
+rst_async => out[15]~reg0.ACLR
+rst_async => out[16]~reg0.ACLR
+rst_async => out[17]~reg0.ACLR
+rst_async => out[18]~reg0.ACLR
+rst_async => out[19]~reg0.ACLR
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+rst_sync => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+en => out.OUTPUTSELECT
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[16] <= out[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[17] <= out[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[18] <= out[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[19] <= out[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|comp_eq_20bit:comp1
+in0[0] => Equal0.IN19
+in0[1] => Equal0.IN18
+in0[2] => Equal0.IN17
+in0[3] => Equal0.IN16
+in0[4] => Equal0.IN15
+in0[5] => Equal0.IN14
+in0[6] => Equal0.IN13
+in0[7] => Equal0.IN12
+in0[8] => Equal0.IN11
+in0[9] => Equal0.IN10
+in0[10] => Equal0.IN9
+in0[11] => Equal0.IN8
+in0[12] => Equal0.IN7
+in0[13] => Equal0.IN6
+in0[14] => Equal0.IN5
+in0[15] => Equal0.IN4
+in0[16] => Equal0.IN3
+in0[17] => Equal0.IN2
+in0[18] => Equal0.IN1
+in0[19] => Equal0.IN0
+in1[0] => Equal0.IN39
+in1[1] => Equal0.IN38
+in1[2] => Equal0.IN37
+in1[3] => Equal0.IN36
+in1[4] => Equal0.IN35
+in1[5] => Equal0.IN34
+in1[6] => Equal0.IN33
+in1[7] => Equal0.IN32
+in1[8] => Equal0.IN31
+in1[9] => Equal0.IN30
+in1[10] => Equal0.IN29
+in1[11] => Equal0.IN28
+in1[12] => Equal0.IN27
+in1[13] => Equal0.IN26
+in1[14] => Equal0.IN25
+in1[15] => Equal0.IN24
+in1[16] => Equal0.IN23
+in1[17] => Equal0.IN22
+in1[18] => Equal0.IN21
+in1[19] => Equal0.IN20
+out0 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|comp_eq_20bit:comp2
+in0[0] => Equal0.IN19
+in0[1] => Equal0.IN18
+in0[2] => Equal0.IN17
+in0[3] => Equal0.IN16
+in0[4] => Equal0.IN15
+in0[5] => Equal0.IN14
+in0[6] => Equal0.IN13
+in0[7] => Equal0.IN12
+in0[8] => Equal0.IN11
+in0[9] => Equal0.IN10
+in0[10] => Equal0.IN9
+in0[11] => Equal0.IN8
+in0[12] => Equal0.IN7
+in0[13] => Equal0.IN6
+in0[14] => Equal0.IN5
+in0[15] => Equal0.IN4
+in0[16] => Equal0.IN3
+in0[17] => Equal0.IN2
+in0[18] => Equal0.IN1
+in0[19] => Equal0.IN0
+in1[0] => Equal0.IN39
+in1[1] => Equal0.IN38
+in1[2] => Equal0.IN37
+in1[3] => Equal0.IN36
+in1[4] => Equal0.IN35
+in1[5] => Equal0.IN34
+in1[6] => Equal0.IN33
+in1[7] => Equal0.IN32
+in1[8] => Equal0.IN31
+in1[9] => Equal0.IN30
+in1[10] => Equal0.IN29
+in1[11] => Equal0.IN28
+in1[12] => Equal0.IN27
+in1[13] => Equal0.IN26
+in1[14] => Equal0.IN25
+in1[15] => Equal0.IN24
+in1[16] => Equal0.IN23
+in1[17] => Equal0.IN22
+in1[18] => Equal0.IN21
+in1[19] => Equal0.IN20
+out0 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|comp_eq_4bit:comp3
+in0[0] => Equal0.IN3
+in0[1] => Equal0.IN2
+in0[2] => Equal0.IN1
+in0[3] => Equal0.IN0
+in1[0] => Equal0.IN7
+in1[1] => Equal0.IN6
+in1[2] => Equal0.IN5
+in1[3] => Equal0.IN4
+out0 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|comp_eq_4bit:comp4
+in0[0] => Equal0.IN3
+in0[1] => Equal0.IN2
+in0[2] => Equal0.IN1
+in0[3] => Equal0.IN0
+in1[0] => Equal0.IN7
+in1[1] => Equal0.IN6
+in1[2] => Equal0.IN5
+in1[3] => Equal0.IN4
+out0 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|reg0:uut8
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+clk => data_out[8]~reg0.CLK
+clk => data_out[9]~reg0.CLK
+clk => data_out[10]~reg0.CLK
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+data_in[0] => data_out.DATAB
+data_in[1] => data_out.DATAB
+data_in[2] => data_out.DATAB
+data_in[3] => data_out.DATAB
+data_in[4] => data_out.DATAB
+data_in[5] => data_out.DATAB
+data_in[6] => data_out.DATAB
+data_in[7] => data_out.DATAB
+data_in[8] => data_out.DATAB
+data_in[9] => data_out.DATAB
+data_in[10] => data_out.DATAB
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[8] <= data_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[9] <= data_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[10] <= data_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|mux:uut9
+in[0] => Mux0.IN15
+in[1] => Mux0.IN14
+in[2] => Mux0.IN13
+in[3] => Mux0.IN12
+in[4] => Mux0.IN11
+in[5] => Mux0.IN10
+in[6] => Mux0.IN9
+in[7] => Mux0.IN8
+in[8] => Mux0.IN7
+in[9] => Mux0.IN6
+in[10] => Mux0.IN5
+sel[0] => Mux0.IN19
+sel[1] => Mux0.IN18
+sel[2] => Mux0.IN17
+sel[3] => Mux0.IN16
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

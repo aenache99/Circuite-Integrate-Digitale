@@ -1,0 +1,6 @@
+module top(input wire start,
+				input wire a,
+				input wire clk,
+				input wire rst,
+				input wire [7:0] data_in,
+				output wire out_tx);
