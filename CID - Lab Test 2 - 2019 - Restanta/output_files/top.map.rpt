@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sat May 09 19:18:50 2020
+Sun May 10 13:12:00 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -18,14 +18,10 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  10. General Register Statistics
  11. Port Connectivity Checks: "ram_instr:ram"
  12. Port Connectivity Checks: "programcounter:pc"
- 13. Port Connectivity Checks: "mux:mux4"
- 14. Port Connectivity Checks: "freq_div:comb_3"
- 15. Port Connectivity Checks: "decoder:dec"
- 16. Port Connectivity Checks: "osscon:oss"
- 17. Port Connectivity Checks: "demux2:dmx2"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 13. Port Connectivity Checks: "osscon:oss"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -52,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat May 09 19:18:50 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 10 13:12:00 2020       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; top                                         ;
 ; Top-level Entity Name           ; top                                         ;
@@ -180,11 +176,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                 ; Library ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; mux.v                            ; yes             ; User Verilog HDL File  ; C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/mux.v            ;         ;
 ; demux1.v                         ; yes             ; User Verilog HDL File  ; C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/demux1.v         ;         ;
 ; demux2.v                         ; yes             ; User Verilog HDL File  ; C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/demux2.v         ;         ;
 ; ram_instr.v                      ; yes             ; User Verilog HDL File  ; C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/ram_instr.v      ;         ;
-; decoder.v                        ; yes             ; User Verilog HDL File  ; C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/decoder.v        ;         ;
 ; programcounter.v                 ; yes             ; User Verilog HDL File  ; C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/programcounter.v ;         ;
 ; osscon.v                         ; yes             ; User Verilog HDL File  ; C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/osscon.v         ;         ;
 ; freq_div.v                       ; yes             ; User Verilog HDL File  ; C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/freq_div.v       ;         ;
@@ -236,19 +230,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+--------------------------------------+
 ; ram_instr:ram|rd_data[0..3]            ; Stuck at GND due to stuck port clock ;
 ; programcounter:pc|out[0..3]            ; Lost fanout                          ;
-; freq_div:comb_3|out                    ; Lost fanout                          ;
+; prescaler:circuit|freq_div8x[0,1]      ; Lost fanout                          ;
+; prescaler:circuit|freq_div4x[0..3]     ; Lost fanout                          ;
+; prescaler:circuit|freq_div8x[2..7]     ; Lost fanout                          ;
+; prescaler:circuit|out                  ; Lost fanout                          ;
 ; osscon:oss|out[0,1]                    ; Lost fanout                          ;
-; Total Number of Removed Registers = 11 ;                                      ;
+; Total Number of Removed Registers = 23 ;                                      ;
 +----------------------------------------+--------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                               ;
-+--------------------------+--------------------+-----------------------------------------------------------+
-; Register name            ; Reason for Removal ; Registers Removed due to This Register                    ;
-+--------------------------+--------------------+-----------------------------------------------------------+
-; programcounter:pc|out[0] ; Lost Fanouts       ; freq_div:comb_3|out, osscon:oss|out[0], osscon:oss|out[1] ;
-+--------------------------+--------------------+-----------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                   ;
++---------------------------------+--------------------+----------------------------------------+
+; Register name                   ; Reason for Removal ; Registers Removed due to This Register ;
++---------------------------------+--------------------+----------------------------------------+
+; prescaler:circuit|freq_div8x[1] ; Lost Fanouts       ; osscon:oss|out[0], osscon:oss|out[1]   ;
+; programcounter:pc|out[0]        ; Lost Fanouts       ; prescaler:circuit|out                  ;
+; prescaler:circuit|freq_div4x[3] ; Lost Fanouts       ; prescaler:circuit|freq_div4x[2]        ;
++---------------------------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -285,35 +284,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux:mux4"                                                                                                                                                                       ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; sel  ; Input ; Warning  ; Input port expression (3 bits) is wider than the input port (2 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:comb_3"                                                                                                                                                                 ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; en   ; Input  ; Warning  ; Input port expression (3 bits) is wider than the input port (1 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; out  ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (3 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND.            ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "decoder:dec"                                                                                                                                                                          ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; sel       ; Input  ; Warning  ; Input port expression (3 bits) is wider than the input port (2 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; out[2..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "osscon:oss"                                                                                                                                                           ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -321,15 +291,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; out  ; Output ; Warning  ; Output or bidir port (2 bits) is smaller than the port expression (3 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "demux2:dmx2"                                                                        ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -362,70 +323,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sat May 09 19:18:35 2020
+    Info: Processing started: Sun May 10 13:11:53 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (12090): Entity "mux" obtained from "mux.v" instead of from Quartus Prime megafunction library File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/mux.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux.v
-    Info (12023): Found entity 1: mux File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/mux.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file demux1.v
     Info (12023): Found entity 1: demux1 File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/demux1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file demux2.v
     Info (12023): Found entity 1: demux2 File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/demux2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram_instr.v
     Info (12023): Found entity 1: ram_instr File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/ram_instr.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
-    Info (12023): Found entity 1: decoder File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/decoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file programcounter.v
     Info (12023): Found entity 1: programcounter File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/programcounter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file osscon.v
     Info (12023): Found entity 1: osscon File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/osscon.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file freq_div.v
-    Info (12023): Found entity 1: freq_div File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/freq_div.v Line: 1
+    Info (12023): Found entity 1: prescaler File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/freq_div.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: top File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at top.v(46): created implicit net for "to_pc" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at top.v(50): created implicit net for "read_address" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 50
-Critical Warning (10846): Verilog HDL Instantiation warning at top.v(42): instance has no name File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 42
+Warning (10236): Verilog HDL Implicit Net warning at top.v(36): created implicit net for "to_pc" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at top.v(40): created implicit net for "read_address" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 40
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "demux1" for hierarchy "demux1:dmx1" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 23
-Info (12128): Elaborating entity "demux2" for hierarchy "demux2:dmx2" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 28
-Info (12128): Elaborating entity "osscon" for hierarchy "osscon:oss" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 34
-Info (12128): Elaborating entity "decoder" for hierarchy "decoder:dec" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 37
-Warning (10230): Verilog HDL assignment warning at decoder.v(4): truncated value with size 32 to match size of target (3) File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/decoder.v Line: 4
-Info (12128): Elaborating entity "freq_div" for hierarchy "freq_div:comb_3" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 42
-Warning (10199): Verilog HDL Case Statement warning at freq_div.v(14): case item expression never matches the case expression File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/freq_div.v Line: 14
-Warning (10199): Verilog HDL Case Statement warning at freq_div.v(15): case item expression never matches the case expression File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/freq_div.v Line: 15
-Info (12128): Elaborating entity "mux" for hierarchy "mux:mux4" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 46
-Info (12128): Elaborating entity "programcounter" for hierarchy "programcounter:pc" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 50
+Info (12128): Elaborating entity "demux1" for hierarchy "demux1:dmx1" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 20
+Info (12128): Elaborating entity "demux2" for hierarchy "demux2:dmx2" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 25
+Info (12128): Elaborating entity "osscon" for hierarchy "osscon:oss" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 31
+Info (12128): Elaborating entity "prescaler" for hierarchy "prescaler:circuit" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 36
+Warning (10230): Verilog HDL assignment warning at freq_div.v(25): truncated value with size 32 to match size of target (2) File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/freq_div.v Line: 25
+Warning (10230): Verilog HDL assignment warning at freq_div.v(39): truncated value with size 32 to match size of target (4) File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/freq_div.v Line: 39
+Warning (10230): Verilog HDL assignment warning at freq_div.v(53): truncated value with size 32 to match size of target (8) File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/freq_div.v Line: 53
+Warning (10272): Verilog HDL Case Statement warning at freq_div.v(13): case item expression covers a value already covered by a previous case item File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/freq_div.v Line: 13
+Info (12128): Elaborating entity "programcounter" for hierarchy "programcounter:pc" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 40
 Warning (10230): Verilog HDL assignment warning at programcounter.v(10): truncated value with size 32 to match size of target (4) File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/programcounter.v Line: 10
-Info (12128): Elaborating entity "ram_instr" for hierarchy "ram_instr:ram" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 56
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "to_mux[2]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
-    Warning (12110): Net "to_mux[1]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "to_mux[2]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
-    Warning (12110): Net "to_mux[1]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
+Info (12128): Elaborating entity "ram_instr" for hierarchy "ram_instr:ram" File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 46
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "ossconout[2]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 13
-    Warning (12110): Net "to_mux[2]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
-    Warning (12110): Net "to_mux[1]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "ossconout[2]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 13
-    Warning (12110): Net "to_mux[2]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
-    Warning (12110): Net "to_mux[1]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "ossconout[2]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 13
-    Warning (12110): Net "to_mux[2]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
-    Warning (12110): Net "to_mux[1]" is missing source, defaulting to GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 15
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "instructions[0]" is stuck at GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 7
     Warning (13410): Pin "instructions[1]" is stuck at GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 7
     Warning (13410): Pin "instructions[2]" is stuck at GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 7
     Warning (13410): Pin "instructions[3]" is stuck at GND File: C:/Users/thema/Documents/Laborator CID - Mihai Antonescu/CID - Lab Test 2 - 2019 - Restanta/top.v Line: 7
-Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 12 input pin(s) that do not drive logic
@@ -444,10 +386,10 @@ Warning (21074): Design contains 12 input pin(s) that do not drive logic
 Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 4 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Sat May 09 19:18:50 2020
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:39
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Sun May 10 13:12:00 2020
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
 
 
