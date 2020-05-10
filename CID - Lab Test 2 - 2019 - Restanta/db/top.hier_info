@@ -11,10 +11,10 @@ wr_addr[0] => wr_addr[0].IN1
 wr_addr[1] => wr_addr[1].IN1
 wr_addr[2] => wr_addr[2].IN1
 wr_addr[3] => wr_addr[3].IN1
-instructions[0] <= ram_instr:ram.rd_data
-instructions[1] <= ram_instr:ram.rd_data
-instructions[2] <= ram_instr:ram.rd_data
-instructions[3] <= ram_instr:ram.rd_data
+instructions[0] << ram_instr:ram.rd_data
+instructions[1] << ram_instr:ram.rd_data
+instructions[2] << ram_instr:ram.rd_data
+instructions[3] << ram_instr:ram.rd_data
 
 
 |top|demux1:dmx1
@@ -60,29 +60,43 @@ out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|decoder:dec
-sel[0] => ShiftLeft0.IN34
-sel[1] => ShiftLeft0.IN33
-out[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|freq_div:comb_3
+|top|prescaler:circuit
+clk => freq_div4x[0].CLK
+clk => freq_div4x[1].CLK
+clk => freq_div4x[2].CLK
+clk => freq_div4x[3].CLK
+clk => freq_div8x[0].CLK
+clk => freq_div8x[1].CLK
+clk => freq_div8x[2].CLK
+clk => freq_div8x[3].CLK
+clk => freq_div8x[4].CLK
+clk => freq_div8x[5].CLK
+clk => freq_div8x[6].CLK
+clk => freq_div8x[7].CLK
 clk => out~reg0.CLK
 rst_n => out.OUTPUTSELECT
-en => Decoder0.IN0
+rst_n => freq_div8x.OUTPUTSELECT
+rst_n => freq_div8x.OUTPUTSELECT
+rst_n => freq_div8x.OUTPUTSELECT
+rst_n => freq_div8x.OUTPUTSELECT
+rst_n => freq_div8x.OUTPUTSELECT
+rst_n => freq_div8x.OUTPUTSELECT
+rst_n => freq_div8x.OUTPUTSELECT
+rst_n => freq_div8x.OUTPUTSELECT
+rst_n => out.OUTPUTSELECT
+rst_n => freq_div4x.OUTPUTSELECT
+rst_n => freq_div4x.OUTPUTSELECT
+rst_n => freq_div4x.OUTPUTSELECT
+rst_n => freq_div4x.OUTPUTSELECT
+en[0] => Mux0.IN6
+en[0] => Decoder0.IN3
+en[1] => Mux0.IN5
+en[1] => Decoder0.IN2
+en[2] => Mux0.IN4
+en[2] => Decoder0.IN1
+en[3] => Mux0.IN3
+en[3] => Decoder0.IN0
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|mux:mux4
-in[0] => Mux0.IN3
-in[1] => Mux0.IN2
-in[2] => Mux0.IN1
-in[3] => Mux0.IN0
-sel[0] => Mux0.IN5
-sel[1] => Mux0.IN4
-out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|programcounter:pc
